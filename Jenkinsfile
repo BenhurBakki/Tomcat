@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/BenhurBakki/Tomcat.git'
-            }
-        }
-
         stage('Maven Build') {
             steps {
                 sh 'mvn clean package'
